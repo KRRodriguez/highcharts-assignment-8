@@ -1,0 +1,27 @@
+body {
+    background: #000;
+    color: #fff;
+    font-family: Calibri, Arial, sans-serif;
+    font-size: 100%;
+    margin: 0; /
+}
+
+div {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+article {
+  width: 900px;
+  margin: 0 auto;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-right: 300px;
+  padding-left: 300px;
+  float: left;
+  width: 45%;
+}
+
+h1 {
+  margin-left: auto;
+}

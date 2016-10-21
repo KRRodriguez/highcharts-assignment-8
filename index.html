@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title> Racial and Religious Hate Crimess in the USA </title>
+        <link href="styles/new.css" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"> </script>
+        <script src="js/highcharts.js"></script>
+        <script src="js/themes/dark-unica.js"></script>
+
+</head>
+<body>
+
+<h1> Hate Crimes in the USA </h1>
+<article>
+<div id="container" style="min-width: 310px; max-width: 800px; height: 400px; margin: 0 auto"></div>
+<p>This graph depicts the amount of victims hate racial crimes there has been in the US from 2013 to 2014. According to <a href=" https://ucr.fbi.gov/hate-crime/2013/topic-pages/incidents-and-offenses/incidentsandoffenses_final "> Racial Hate Crime</a> in 2013 it was reported that 3,407 single-bias hate crime offenses were racially motivated, and in 2014 it was reported that about 3,227  of these offenses were racial hate crimes. This graph shows a slight decrease of about 180 victims from crimes reported in 2013 to 2014.  </p>
+
+<div id="religion" style="min-width: 310px; max-width: 800px; height: 400px; margin: 0 auto"></div>
+<p> </p>This second graph shows the victims of religious hate crimes in the US from 2013 to 2014. This graph was interesting because there was a large increase with victims suffering of these hate crimes.  In <a href=" https://ucr.fbi.gov/hate-crime/2013/topic-pages/incidents-and offenses/incidentsandoffenses_final "> Religion Hate Crime stats</a> it states how in 2013 there were 1,402 of these hate crimes, and then in 2014 this number increased around 200 victims making increase to 1,140 victims. Most increases were seen in within the Islamic, Catholic and Protestant religious groups.  
+</article>
+
+<script>
+$(function () {
+    $('#container').highcharts({
+        chart: {
+            type: 'bar'
+          },
+        title: {
+            text: 'Racial Hate Crimes in the USA'
+        },
+        subtitle: {
+
+          text: 'Hate crime incidents from 2013 to 2014'
+        },
+        xAxis: {
+            categories: ['Anti-African American', 'Anti-White', 'Anti-Asian', 'Anti- American Indian or Alaska Native', 'Anti-Native Hawaiian or Other Pacific Islander', 'Anti-Multiple Races, Group'],
+            title: {
+                text: null
+            }
+        },
+        yAxis: {
+            min: 0,
+            title: {
+                text: 'Number of victims',
+                align: 'high'
+            },
+            labels: {
+                overflow: 'justify'
+            }
+        },
+        tooltip: {
+            valueSuffix: '  '
+        },
+        plotOptions: {
+            bar: {
+                dataLabels: {
+                    enabled: true
+                }
+            }
+        },
+        legend: {
+            layout: 'vertical',
+            align: 'right',
+            verticalAlign: 'top',
+            x: -40,
+            y: 80,
+            floating: true,
+            borderWidth: 1,
+            backgroundColor: ((Highcharts.theme && Highcharts.theme.legendBackgroundColor) || '#FFFFFF'),
+            shadow: true
+        },
+        credits: {
+            enabled: false
+        },
+        series: [{
+
+            name: 'Year 2013',
+            data: [2371 , 754, 164 ,159 ,3, 112 ]
+        }, {
+            name: 'Year 2014',
+            data: [2022 , 734 ,201 ,148 ,4,118  ]
+        }]
+    });
+});
+      </script>
+
+
+
+
+
+
+
+      <script>
+      $(function () {
+    $('#religion').highcharts({
+        chart: {
+            type: 'column'
+        },
+        title: {
+            text: 'Religion based hate crimes in the USA'
+        },
+        xAxis: {
+            categories: ['Anti-Jewish', 'Anti-Catholic', 'Anti-Protestant', 'Anti-Islamic', 'Anti-Atheism']
+        },
+        yAxis: {
+            min: 0,
+            title: {
+                text: 'Number of victims'
+            },
+            stackLabels: {
+                enabled: true,
+                style: {
+                    fontWeight: 'bold',
+                    color: (Highcharts.theme && Highcharts.theme.textColor) || 'gray'
+                }
+            }
+        },
+        legend: {
+            align: 'right',
+            x: -30,
+            verticalAlign: 'top',
+            y: 25,
+            floating: true,
+            backgroundColor: (Highcharts.theme && Highcharts.theme.background2) || 'white',
+            borderColor: '#CCC',
+            borderWidth: 1,
+            shadow: false
+        },
+        tooltip: {
+            headerFormat: '<b>{point.x}</b><br/>',
+            pointFormat: '{series.name}: {point.y}<br/>Total: {point.stackTotal}'
+        },
+        plotOptions: {
+            column: {
+                stacking: 'normal',
+                dataLabels: {
+                    enabled: true,
+                    color: (Highcharts.theme && Highcharts.theme.dataLabelsColor) || 'white'
+                }
+            }
+        },
+        series: [{
+        }, {
+            name: '2013',
+            data: [737, 75, 47, 167, 7]
+        }, {
+            name: '2014',
+            data: [648,70 , 28, 184, 14]
+        }]
+    });
+});
+</script>
+
+
+    </body>
+    </html>
